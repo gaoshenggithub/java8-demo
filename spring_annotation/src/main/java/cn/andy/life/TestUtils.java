@@ -197,13 +197,21 @@ public class TestUtils {
     }
 
     /**
-     * 11. 可以使用JSR250
+     * 11.  Bean的生命周期 可以使用JSR250
      *  中的
      *  @PostConstruct
      * @PreDestory
      */
 
     /**
-     *
+     *12.  Bean的生命周期 可以使用BeanPostProcessor
      */
+    @Test
+    public void beanpostprocessor(){
+        AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext();
+        String[] beanDefinitionNames = applicationContext.getBeanDefinitionNames();
+        for (String beanDefinitionName : beanDefinitionNames) {
+            System.out.println("beanDefinitionName = " + beanDefinitionName);
+        }
+    }
 }
