@@ -34,4 +34,11 @@ public class LogAspects {
     public void around() {
         System.out.println("环绕通知....");
     }
+
+
+    public static void main(String[] args) {
+        if (4.0>5.0){
+            System.out.println("1");
+        }
+    }
 }
